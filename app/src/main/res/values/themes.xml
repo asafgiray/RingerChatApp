@@ -2,6 +2,6 @@
     <!-- Base application theme. -->
     <style name="Theme.RingerChatApp" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <item name="colorPrimary">@color/primary</item>
-        <item name="android:statusBarColor" tools:targetApi="l">@color/primary</item>
+        <item name="android:statusBarColor" tools:targetApi="l">@color/secondary_text</item>
     </style>
 </resources>

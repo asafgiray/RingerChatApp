@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">RingerChatApp</string>
     <string name="login_to_continue">Login to Continue</string>
-    <string name="welcome_back">Welcome Back!</string>
+    <string name="welcome_back">Welcome to Ringer!</string>
     <string name="email">Email</string>
     <string name="password">Password</string>
     <string name="sign_in">Sign In</string>

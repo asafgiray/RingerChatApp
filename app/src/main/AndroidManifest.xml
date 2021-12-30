@@ -3,6 +3,9 @@
     package="com.ringerapp">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE"/>
 
     <application
         android:allowBackup="true"
@@ -27,7 +30,7 @@
             </intent-filter>
 
         </activity>
-        <activity android:name=".MainActivity"/>
+        <activity android:name=".activities.MainActivity"/>
 
         <service
             android:name=".firebase.MessagingService"
