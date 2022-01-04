@@ -31,23 +31,23 @@ public class ChatAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>{
     @NonNull
     @Override
     public RecyclerView.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-      if(viewType== VIEW_TYPE_SENT){
-          return new SentMessageViewHolder(
-                  ItemContainerSentMessageBinding.inflate(
-                          LayoutInflater.from(parent.getContext()),
-                          parent,
-                          false
-                  )
-          );
-      }else{
-          return new ReceivedMessageViewHolder(
-                  ItemContainerReceivedMessageBinding.inflate(
-                          LayoutInflater.from(parent.getContext()),
-                          parent,
-                          false
-                  )
-          );
-      }
+        if(viewType== VIEW_TYPE_SENT){
+            return new SentMessageViewHolder(
+                    ItemContainerSentMessageBinding.inflate(
+                            LayoutInflater.from(parent.getContext()),
+                            parent,
+                            false
+                    )
+            );
+        }else{
+            return new ReceivedMessageViewHolder(
+                    ItemContainerReceivedMessageBinding.inflate(
+                            LayoutInflater.from(parent.getContext()),
+                            parent,
+                            false
+                    )
+            );
+        }
     }
 
     @Override
