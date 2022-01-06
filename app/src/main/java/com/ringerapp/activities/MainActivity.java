@@ -1,6 +1,6 @@
 package com.ringerapp.activities;
 
-import  androidx.appcompat.app.AppCompatActivity;
+
 
 import android.content.Intent;
 import android.graphics.Bitmap;
@@ -30,7 +30,7 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 
-public class MainActivity extends AppCompatActivity implements ConversionListener {
+public class MainActivity extends BaseActivity implements ConversionListener {
     private ActivityMainBinding binding;
     private PreferenceManager preferenceManager;
     private List<ChatMessage> conversations;
