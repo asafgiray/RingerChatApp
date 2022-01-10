@@ -17,6 +17,18 @@
         app:riv_oval="true"/>
 
     <TextView
+        android:id="@+id/messageStatus"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textColor="@color/green"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/textMessage"
+        app:layout_constraintWidth_max="wrap"
+        app:layout_constraintWidth_percent="0.8"
+        android:paddingBottom="@dimen/_2sdp"
+        android:textSize="@dimen/_8sdp"/>
+
+    <TextView
         android:id="@+id/textMessage"
         android:layout_width="0dp"
         android:layout_height="wrap_content"

@@ -1,13 +1,14 @@
 package com.ringerapp.activities;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Patterns;
 import android.view.View;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AppCompatActivity;
+
+import com.airbnb.lottie.LottieAnimationView;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.ringerapp.R;
@@ -15,17 +16,17 @@ import com.ringerapp.databinding.ActivitySignInBinding;
 import com.ringerapp.utilities.Constants;
 import com.ringerapp.utilities.PreferenceManager;
 
-import java.util.HashMap;
-
 public class SignInActivity extends AppCompatActivity {
 
     private ActivitySignInBinding binding;
     private PreferenceManager preferenceManager;
+    LottieAnimationView lottie;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         preferenceManager = new PreferenceManager(getApplicationContext());
+
         if (preferenceManager.getBoolean(Constants.KEY_IS_SIGNED_IN)){
             Intent intent = new Intent(getApplicationContext(),MainActivity.class);
             startActivity(intent);
@@ -75,7 +76,9 @@ public class SignInActivity extends AppCompatActivity {
 
     private void loading(Boolean isLoading){
         if (isLoading){
+            lottie = findViewById(R.id.progressBar);
             binding.buttonSignIn.setVisibility(View.INVISIBLE);
+            lottie.animate().start();
             binding.progressBar.setVisibility(View.VISIBLE);
         }else {
             binding.progressBar.setVisibility(View.INVISIBLE);

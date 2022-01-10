@@ -79,10 +79,10 @@ public class MainActivity extends BaseActivity implements ConversionListener {
     }
 
     private void listenConversations() {
-        database.collection(Constants.KEY_COLLECTION_CONVERSATİONS)
+        database.collection(Constants.KEY_COLLECTION_CONVERSATIONS)
                 .whereEqualTo(Constants.KEY_SENDER_ID, preferenceManager.getString(Constants.KEY_USER_ID))
                 .addSnapshotListener(eventListener);
-        database.collection(Constants.KEY_COLLECTION_CONVERSATİONS)
+        database.collection(Constants.KEY_COLLECTION_CONVERSATIONS)
                 .whereEqualTo(Constants.KEY_RECEIVER_ID, preferenceManager.getString(Constants.KEY_USER_ID))
                 .addSnapshotListener(eventListener);
 
@@ -139,6 +139,8 @@ public class MainActivity extends BaseActivity implements ConversionListener {
     }
 
     private void updateToken(String token) {
+        preferenceManager.putString(Constants.KEY_FCM_TOKEN,token);
+
         FirebaseFirestore database = FirebaseFirestore.getInstance();
         DocumentReference documentReference =
                 database.collection(Constants.KEY_COLLECTION_USERS).document(
