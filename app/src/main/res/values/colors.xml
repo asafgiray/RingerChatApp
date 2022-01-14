@@ -8,8 +8,9 @@
     <color name="input_background">#ECECEC</color>
     <color name="icon_background">#208E8E8E</color>
     <color name="error">#B00020</color>
-    <color name="received_message_background">#2E4C8F</color>
+    <color name="received_message_background">#4C9EAC</color>
     <color name="turquoise">#64dfdf</color>
     <color name="chatInput">#15000000</color>
     <color name="green">#07A507</color>
+    <color name="sendMessage">#6dc3da</color>
 </resources>

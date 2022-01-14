@@ -54,10 +54,10 @@ public class MessagingService extends FirebaseMessagingService {
         //Notification
 
         builder.setContentTitle(user.name);
-        builder.setLights(Color.BLUE,300,300);
+        builder.setLights(Color.BLUE,500,500);
         builder.setVibrate(new long[] {250,250,250,250,250 });
         builder.setSound(customSoundUri);
-        
+
         //
 
         builder.setContentText(remoteMessage.getData().get(Constants.KEY_MESSAGE));
