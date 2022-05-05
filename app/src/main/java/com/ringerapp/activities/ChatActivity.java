@@ -82,6 +82,13 @@ public class ChatActivity extends BaseActivity {
 
     private void sendMessage(){
         HashMap<String,Object>message = new HashMap<>();
+        /*if(message.isEmpty()){
+            message.put(Constants.KEY_SENDER_ID,preferenceManager.getString((Constants.KEY_USER_ID)));
+            message.put(Constants.KEY_RECEIVER_ID,receiverUser.id);
+            message.put(Constants.KEY_MESSAGE,binding.inputMessage.getText().toString());
+            message.put(Constants.KEY_TIMESTAMP,new Date());
+            database.collection(Constants.KEY_COLLECTION_CHAT).add(message);
+        }*/
         message.put(Constants.KEY_SENDER_ID,preferenceManager.getString(Constants.KEY_USER_ID));
         message.put(Constants.KEY_RECEIVER_ID,receiverUser.id);
         message.put(Constants.KEY_MESSAGE,binding.inputMessage.getText().toString());
