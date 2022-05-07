@@ -38,7 +38,7 @@ public class Constants {
             remoteMsgHeaders=new HashMap<>();
             remoteMsgHeaders.put(
                     REMOTE_MSG_AUTHORIZATION,
-                    "key= AAAAPBofRbI:APA91bHng02Ez_fwCbtOCIp8qGOBt02fiiINaauYpcebXlrhXv-3drIKACfvlWRhAacdd8STkQrmVWEn68Wwd9iW9Q46Amqsnf3EVivVlBdAxnO-JxbKwVJDAoB5b9YUFQd5OOAlX-PF"
+                    "key= /Your firebase key"
             );
             remoteMsgHeaders.put(
                     REMOTE_MSG_CONTENT_TYPE,
